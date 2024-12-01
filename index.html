@@ -4,24 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Μελέτη Μεγαλοκαρδίας</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Μελέτη της Μεγαλοκαρδίας</h1>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Μελέτη της Μεγαλοκαρδίας</h1>
+            <p class="lead">Μάθετε για τη μεγαλοκαρδία και εξασκηθείτε στη διάγνωση μέσω ακτινογραφιών.</p>
+        </div>
     </header>
-    <section>
-        <h2>Τι είναι η Μεγαλοκαρδία;</h2>
-        <p>Η Μεγαλοκαρδία είναι η διόγκωση της καρδιάς...</p>
-    </section>
-    <section>
-        <h2>Πώς εντοπίζεται;</h2>
-        <p>Η μέτρηση γίνεται με τον τύπο CTR...</p>
-    </section>
-    <section>
-        <h2>Ξεκινήστε</h2>
-        <p>Χρησιμοποιήστε την εφαρμογή για να κάνετε μετρήσεις και να καταλήξετε σε συμπεράσματα.</p>
-        <a href="your-app-link.html">Ξεκινήστε τώρα</a>
-    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Τι είναι η Μεγαλοκαρδία -->
+        <section class="mb-5">
+            <h2 class="text-primary">Τι είναι η Μεγαλοκαρδία;</h2>
+            <p>
+                Η Μεγαλοκαρδία (Cardiomegaly) είναι η διόγκωση της καρδιάς, όπως φαίνεται σε μια ακτινογραφία θώρακα.
+                Συνήθως αποτελεί ένδειξη υποκείμενων παθήσεων, όπως αρτηριακή υπέρταση ή καρδιακή ανεπάρκεια.
+            </p>
+        </section>
+
+        <!-- Πώς εντοπίζεται -->
+        <section class="mb-5">
+            <h2 class="text-primary">Πώς εντοπίζεται;</h2>
+            <p>
+                Η διάγνωση γίνεται μέσω ακτινογραφιών θώρακα. Υπολογίζεται ο δείκτης <strong>Cardiothoracic Ratio (CTR)</strong>:
+            </p>
+            <div class="alert alert-info">
+                <strong>CTR = (A + B) / x</strong>
+            </div>
+            <ul>
+                <li><strong>Φυσιολογικό CTR:</strong> ≤ 50%</li>
+                <li><strong>Πιθανή Μεγαλοκαρδία:</strong> > 50%</li>
+            </ul>
+        </section>
+
+        <!-- Εφαρμογή -->
+        <section class="mb-5">
+            <h2 class="text-primary">Ξεκινήστε την Εφαρμογή</h2>
+            <p>
+                Χρησιμοποιήστε την εφαρμογή για να κάνετε μετρήσεις σε ακτινογραφίες και να εξάγετε συμπεράσματα σχετικά με τη μεγαλοκαρδία.
+            </p>
+            <a href="your-app-link.html" class="btn btn-primary btn-lg">Ξεκινήστε τώρα</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Μελέτη Μεγαλοκαρδίας. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
