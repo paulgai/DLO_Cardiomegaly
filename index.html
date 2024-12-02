@@ -1,64 +1,447 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
     <title>Μελέτη Μεγαλοκαρδίας</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- MathJax Library -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <style>
+      /* Μικρότερο ύψος για το header */
+      header {
+        padding: 1rem 0;
+      }
+      /* Μικρότερο ύψος για το footer και πάντα στο κάτω μέρος */
+      footer {
+        padding: 0.5rem 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Μελέτη της Μεγαλοκαρδίας</h1>
-            <p class="lead">Μάθετε για τη μεγαλοκαρδία και εξασκηθείτε στη διάγνωση μέσω ακτινογραφιών.</p>
-        </div>
+    <header class="bg-primary text-white text-center">
+      <div class="container">
+        <h1 class="display-6">Μελέτη της Μεγαλοκαρδίας</h1>
+        <p class="lead">
+          Μάθετε για τη μεγαλοκαρδία και εξασκηθείτε στη διάγνωση μέσω
+          ακτινογραφιών.
+        </p>
+      </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container my-5">
+    <main class="container my-3 flex-grow-1">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
         <!-- Τι είναι η Μεγαλοκαρδία -->
-        <section class="mb-5">
-            <h2 class="text-primary">Τι είναι η Μεγαλοκαρδία;</h2>
-            <p>
-                Η Μεγαλοκαρδία (Cardiomegaly) είναι η διόγκωση της καρδιάς, όπως φαίνεται σε μια ακτινογραφία θώρακα.
-                Συνήθως αποτελεί ένδειξη υποκείμενων παθήσεων, όπως αρτηριακή υπέρταση ή καρδιακή ανεπάρκεια.
-            </p>
-        </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              Τι είναι η Μεγαλοκαρδία;
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body">
+              <div class="row align-items-center">
+                <div class="row align-items-center">
+                  <div class="col-lg-8">
+                    <p>
+                      Η Μεγαλοκαρδία είναι ένας όρος που χρησιμοποιούμε για να
+                      περιγράψουμε όταν η καρδιά ενός ανθρώπου είναι πιο μεγάλη
+                      από το φυσιολογικό. Δεν είναι μια ασθένεια από μόνη της,
+                      αλλά συνήθως αποτελεί σημάδι ότι κάτι δεν λειτουργεί σωστά
+                      στο καρδιαγγειακό σύστημα.
+                    </p>
+                    <p>
+                      Η καρδιά μπορεί να μεγαλώσει για διάφορους λόγους, όπως:
+                    </p>
+                    <ul>
+                      <li>
+                        Όταν δουλεύει πιο σκληρά από το φυσιολογικό για να
+                        αντλήσει αίμα.
+                      </li>
+                      <li>
+                        Όταν υπάρχουν προβλήματα στις βαλβίδες της καρδιάς (που
+                        βοηθούν το αίμα να κυκλοφορεί σωστά).
+                      </li>
+                      <li>
+                        Όταν κάποιος έχει υψηλή αρτηριακή πίεση (υπέρταση) για
+                        μεγάλο χρονικό διάστημα.
+                      </li>
+                      <li>
+                        Όταν υπάρχει κάποια λοίμωξη ή φλεγμονή στην καρδιά.
+                      </li>
+                    </ul>
+                    <p>
+                      Όταν η καρδιά μεγαλώνει, μπορεί να μην κάνει τη δουλειά
+                      της τόσο καλά όσο πρέπει. Αυτό σημαίνει ότι ίσως δεν
+                      μπορεί να στείλει αρκετό αίμα στο υπόλοιπο σώμα, κάτι που
+                      μπορεί να προκαλέσει συμπτώματα όπως εύκολη κόπωση,
+                      δύσπνοια ή πρήξιμο στα πόδια.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center">
+                    <img
+                      src="enlarged-heart.jpg"
+                      alt="Εικόνα Μεγαλοκαρδίας"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Πώς εντοπίζεται -->
-        <section class="mb-5">
-            <h2 class="text-primary">Πώς εντοπίζεται;</h2>
-            <p>
-                Η διάγνωση γίνεται μέσω ακτινογραφιών θώρακα. Υπολογίζεται ο δείκτης <strong>Cardiothoracic Ratio (CTR)</strong>:
-            </p>
-            <div class="alert alert-info">
-                <strong>CTR = (A + B) / x</strong>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              Πώς εντοπίζεται;
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              <div class="row align-items-center">
+                <!-- Εικόνα στα αριστερά -->
+                <div class="col-lg-4 text-center">
+                  <img
+                    src="Cardiothoracic_ratio.jpg"
+                    alt="Εικόνα Μεγαλοκαρδίας"
+                    class="img-fluid rounded shadow"
+                  />
+                </div>
+                <!-- Κείμενο στα δεξιά -->
+                <div class="col-lg-8">
+                  <p>
+                    Η Μεγαλοκαρδία συνήθως ανιχνεύεται με μια απλή ακτινογραφία
+                    θώρακα (X-ray), όπου μπορούμε να δούμε το μέγεθος της
+                    καρδιάς και να το συγκρίνουμε με το μέγεθος του θώρακα. Ένας
+                    από τους βασικούς τρόπους για να αξιολογήσουμε το μέγεθος
+                    της καρδιάς είναι ο υπολογισμός του λεγόμενου
+                    <strong>Cardiothoracic Ratio (CTR)</strong>. Αυτός ο δείκτης
+                    εκφράζει την αναλογία του πλάτους της καρδιάς (δηλαδή το
+                    άθροισμα των αποστάσεων από το μεσοθωράκιο μέχρι τα δεξιά
+                    και τα αριστερά όρια της καρδιάς) σε σχέση με το εσωτερικό
+                    πλάτος του θώρακα.
+                  </p>
+                  <p>Ο τύπος που χρησιμοποιείται είναι ο εξής:</p>
+                  <p>\[ CTR = \frac{MRD + MLD}{ID} \]</p>
+                  <p>όπου:</p>
+                  <ul>
+                    <li>
+                      <strong>MRD (Maximum Right Diameter):</strong> Η
+                      μεγαλύτερη κάθετη απόσταση από τη μέση γραμμή (midline)
+                      μέχρι το δεξί όριο της καρδιάς.
+                    </li>
+                    <li>
+                      <strong>MLD (Maximum Left Diameter):</strong> Η μεγαλύτερη
+                      κάθετη απόσταση από τη μέση γραμμή (midline) μέχρι το
+                      αριστερό όριο της καρδιάς.
+                    </li>
+                    <li>
+                      <strong>ID (Internal Diameter):</strong> Το εσωτερικό
+                      πλάτος του θώρακα στο ύψος του δεξιού ημιδιαφράγματος.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Περίπτωση 1: CTR ≤ 0,5 (50%)</h3>
+                  <p>
+                    Όταν η τιμή του CTR είναι μικρότερη ή ίση με 0,5, αυτό
+                    σημαίνει ότι το πλάτος της καρδιάς είναι φυσιολογικό σε
+                    σχέση με το πλάτος του θώρακα. Σε αυτήν την περίπτωση:
+                  </p>
+                  <ul>
+                    <li>Η καρδιά θεωρείται φυσιολογικού μεγέθους.</li>
+                    <li>Δεν υπάρχουν ενδείξεις Μεγαλοκαρδίας.</li>
+                    <li>
+                      Ο ασθενής πιθανότατα δεν χρειάζεται περαιτέρω εξετάσεις σε
+                      σχέση με τη διάγνωση Μεγαλοκαρδίας, εκτός αν υπάρχουν άλλα
+                      συμπτώματα που να υποδηλώνουν προβλήματα.
+                    </li>
+                  </ul>
+                  <p>
+                    Η κατηγορία αυτή περιλαμβάνει τους περισσότερους υγιείς
+                    ανθρώπους, όπου η καρδιά λειτουργεί σωστά και δεν ασκεί
+                    υπερβολική πίεση στο θώρακα.
+                  </p>
+                  <h3>Περίπτωση 2: CTR > 0,5 (50%)</h3>
+                  <p>
+                    Όταν η τιμή του CTR είναι μεγαλύτερη από 0,5, τότε υπάρχει
+                    πιθανότητα η καρδιά να είναι διογκωμένη, δηλαδή να υπάρχει
+                    Μεγαλοκαρδία. Αυτό μπορεί να οφείλεται σε διάφορους
+                    παράγοντες, όπως:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Υπέρταση (υψηλή αρτηριακή πίεση):</strong> Η
+                      καρδιά μπορεί να μεγαλώσει για να ανταπεξέλθει στην
+                      αυξημένη πίεση.
+                    </li>
+                    <li>
+                      <strong>Βαλβιδοπάθειες:</strong> Προβλήματα στις βαλβίδες
+                      της καρδιάς μπορούν να προκαλέσουν διόγκωση.
+                    </li>
+                    <li>
+                      <strong>Καρδιακή ανεπάρκεια:</strong> Όταν η καρδιά δεν
+                      μπορεί να αντλήσει το αίμα σωστά, μπορεί να διογκωθεί.
+                    </li>
+                    <li>
+                      <strong>Περικαρδίτιδα ή φλεγμονές:</strong> Παθολογικές
+                      καταστάσεις που επηρεάζουν τον ιστό γύρω από την καρδιά.
+                    </li>
+                  </ul>
+                  <p>
+                    Σε αυτή την περίπτωση, συνήθως απαιτείται περαιτέρω
+                    διαγνωστικός έλεγχος, όπως:
+                  </p>
+                  <ul>
+                    <li>Υπερηχοκαρδιογράφημα (Echo).</li>
+                    <li>Ηλεκτροκαρδιογράφημα (ECG).</li>
+                    <li>
+                      Αιματολογικές εξετάσεις για την αξιολόγηση της συνολικής
+                      κατάστασης της καρδιάς.
+                    </li>
+                  </ul>
+                  <p>
+                    Η έγκαιρη ανίχνευση της Μεγαλοκαρδίας είναι κρίσιμη για να
+                    αποτραπούν σοβαρά προβλήματα, όπως καρδιακή ανεπάρκεια ή
+                    άλλες επιπλοκές.
+                  </p>
+                </div>
+              </div>
             </div>
-            <ul>
-                <li><strong>Φυσιολογικό CTR:</strong> ≤ 50%</li>
-                <li><strong>Πιθανή Μεγαλοκαρδία:</strong> > 50%</li>
-            </ul>
-        </section>
+          </div>
+        </div>
 
-        <!-- Εφαρμογή -->
-        <section class="mb-5">
-            <h2 class="text-primary">Ξεκινήστε την Εφαρμογή</h2>
-            <p>
-                Χρησιμοποιήστε την εφαρμογή για να κάνετε μετρήσεις σε ακτινογραφίες και να εξάγετε συμπεράσματα σχετικά με τη μεγαλοκαρδία.
-            </p>
-            <a href="your-app-link.html" class="btn btn-primary btn-lg">Ξεκινήστε τώρα</a>
-        </section>
+        <!-- Ξεκινήστε την Εφαρμογή -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              Εφαρμογή: Υπολογισμός CTR
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree"
+          >
+            <div class="accordion-body">
+              <h3>Υπολογισμός CTR</h3>
+              <p>
+                Στην εφαρμογή που θα χρησιμοποιήσουμε, θα έχετε την ευκαιρία να
+                μελετήσετε πραγματικές ακτινογραφίες θώρακα και να εξασκηθείτε
+                στον υπολογισμό του
+                <strong>Cardiothoracic Ratio (CTR)</strong>. Τι σημαίνει αυτό;
+                Θα υπολογίσετε αν το μέγεθος της καρδιάς είναι φυσιολογικό ή αν
+                υπάρχει ένδειξη Μεγαλοκαρδίας (δηλαδή αν η καρδιά είναι
+                διογκωμένη).
+              </p>
+
+              <h4>Τι θα κάνετε;</h4>
+              <ul>
+                <li>
+                  <strong>Επιλέξτε περιστατικό:</strong> Υπάρχουν δύο
+                  διαφορετικά περιστατικά για να δουλέψετε. Το κάθε ένα έχει
+                  διαφορετική ακτινογραφία. Μπορείτε να εναλλάσσετε τα
+                  περιστατικά για να συγκρίνετε και να δείτε πώς διαφέρει το CTR
+                  σε κάθε περίπτωση.
+                </li>
+                <li>
+                  <strong>Μετακινήστε τις γραμμές:</strong>
+
+                  Υπάρχουν τέσσερις γραμμές που μπορείτε να μετακινήσετε στην
+                  ακτινογραφία:
+
+                  <ul>
+                    <li>
+                      <strong>Το MRD</strong> είναι η απόσταση από τη μέση
+                      γραμμή (πράσινη γραμμή που ορίζει το μεσοθωράκιο) μέχρι το
+                      δεξί όριο της καρδιάς.
+                    </li>
+                    <li>
+                      <strong>Το MLD</strong> είναι η απόσταση από τη μέση
+                      γραμμή (πράσινη γραμμή που ορίζει το μεσοθωράκιο) μέχρι το
+                      αριστερό όριο της καρδιάς.
+                    </li>
+                    <li>
+                      <strong>Το ID</strong> είναι το εσωτερικό πλάτος του
+                      θώρακα (μετράμε στο ύψος του δεξιού ημιδιαφράγματος).
+                    </li>
+                    <li>
+                      <strong>Η πράσινη γραμμή</strong> ορίζει το μεσοθωράκιο
+                      και μπορείτε να την μετακινήσετε για να αλλάξετε τη μέση
+                      γραμμή (midline), η οποία επηρεάζει τις μετρήσεις MRD και
+                      MLD.
+                    </li>
+                  </ul>
+
+                  Με τη μετακίνηση αυτών των γραμμών, θα κάνετε τις μετρήσεις
+                  σας πάνω στην ακτινογραφία.
+                </li>
+
+                <li>
+                  <strong>Υπολογισμός του CTR:</strong>
+                  Με βάση τις μετρήσεις σας, η εφαρμογή θα υπολογίσει αυτόματα
+                  το CTR και θα δείτε αν είναι κάτω ή πάνω από 50%. Αυτό θα σας
+                  βοηθήσει να αποφασίσετε αν η καρδιά του ασθενούς είναι
+                  φυσιολογική ή όχι.
+                </li>
+                <li>
+                  <strong>Βγάλτε τα συμπεράσματά σας:</strong> Αφού κάνετε τις
+                  μετρήσεις και τους υπολογισμούς σας, σκεφτείτε: Τι μας λέει
+                  αυτό το αποτέλεσμα; Είναι η καρδιά φυσιολογική ή διογκωμένη;
+                  Τι μπορεί να σημαίνει αυτό για την υγεία του ασθενούς;
+                </li>
+              </ul>
+
+              <h4>Γιατί το κάνουμε αυτό;</h4>
+              <p>Η άσκηση αυτή σας βοηθά:</p>
+              <ul>
+                <li>Να μάθετε πώς γίνεται ο υπολογισμός του CTR.</li>
+                <li>Να εξοικειωθείτε με την ανάλυση ακτινογραφιών.</li>
+                <li>
+                  Να κατανοήσετε τη σημασία της Μεγαλοκαρδίας και πώς αυτή
+                  συνδέεται με την υγεία της καρδιάς.
+                </li>
+              </ul>
+
+              <p>
+                Είναι σαν να είστε γιατροί που εξετάζουν πραγματικές
+                περιπτώσεις! Δοκιμάστε να μετρήσετε, να υπολογίσετε και να
+                βγάλετε τα δικά σας συμπεράσματα. Καλή επιτυχία! 😊
+              </p>
+              <div
+                id="ggbApplet"
+                class="mx-auto"
+                style="
+                  width: 100%;
+                  max-width: 900px;
+                  height: 700px;
+                  border: 1px solid #ccc;
+                "
+              >
+                <!-- Περιεχόμενο της εφαρμογής -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-
+    <!-- Invisible Spacer -->
+    <div style="height: 150px"></div>
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Μελέτη Μεγαλοκαρδίας. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+    <footer
+      class="bg-dark text-start"
+      style="color: #b0b0b0; font-size: 0.875rem; padding-left: 20px"
+    >
+      <p class="mb-0">
+        © 2024 Pavlos Gaintatzis, Maria-Stavroula Belitsou. All rights reserved.
+      </p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script>
+      var parameters = {
+        id: "ggbApplet",
+        width: 900,
+        height: 700,
+        showMenuBar: false,
+        showAlgebraInput: false,
+        showToolBar: false,
+        customToolBar:
+          "0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6",
+        showToolBarHelp: false,
+        showResetIcon: false,
+        enableLabelDrags: false,
+        enableShiftDragZoom: false,
+        enableRightClick: false,
+        errorDialogsActive: false,
+        useBrowserForJS: false,
+        allowStyleBar: false,
+        preventFocus: false,
+        showZoomButtons: false,
+        capturingThreshold: 3,
+        // add code here to run when the applet starts
+        appletOnLoad: function (api) {
+          /* api.evalCommand('Segment((1,2),(3,4))');*/
+        },
+        showFullscreenButton: false,
+        scale: 1,
+        disableAutoScale: false,
+        allowUpscale: false,
+        clickToLoad: false,
+        appName: "classic",
+        buttonRounding: 0.7,
+        buttonShadows: false,
+        language: "en",
+        // use this instead of ggbBase64 to load a material from geogebra.org
+        // "material_id":"RHYH3UQ8",
+        // use this instead of ggbBase64 to load a .ggb file
+        filename: "Cardiothoracic_Ratio.ggb",
+      };
+      // is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
+      var views = {
+        is3D: 0,
+        AV: 0,
+        SV: 0,
+        CV: 0,
+        EV2: 0,
+        CP: 0,
+        PC: 0,
+        DA: 0,
+        FI: 0,
+        macro: 0,
+      };
+      var applet = new GGBApplet(parameters, "5.0", views);
+      window.onload = function () {
+        applet.inject("ggbApplet");
+      };
+      applet.setPreviewImage("thumb.png", "loading.png");
+    </script>
+  </body>
 </html>
-
